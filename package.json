@@ -1,0 +1,55 @@
+{
+  "name": "warlock-spell-angular",
+  "version": "1.0.0-alpha.1",
+  "description": "An addon to add AngularJS support to the Warlock spell for managing client-side webapps.",
+  "homepage": "https://github.com/ngbp/spell-angular",
+  "author": {
+    "name": "Warlock Team",
+    "url": "http://getwarlock.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ngbp/spell-angular.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ngbp/spell-angular"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ngbp/spell-angular/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "peerDependencies": {
+    "warlock-spell-webapp": "~1.0.0"
+  },
+  "keywords": [
+    "warlockplugin",
+    "warlockspell"
+  ],
+  "warlock": {
+    "globs": {
+      "source": {
+        "templates": [
+          "<%= paths.source_app %>/**/*.tpl.html"
+        ]
+      }
+    },
+    "tasks": {
+      "angular": {
+        "tplCache": {
+          "filename": "templates.js",
+          "standalone": true,
+          "root": "@tpl",
+          "module": "templates"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "gulp-angular-templatecache": "^1.1.3"
+  }
+}
