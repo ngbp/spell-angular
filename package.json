@@ -35,6 +35,9 @@
       "source": {
         "templates": [
           "<%= paths.source_app %>/**/*.tpl.html"
+        ],
+        "html": [
+          "!<%= paths.source_app %>/**/*.tpl.html"
         ]
       }
     },
@@ -45,11 +48,15 @@
           "standalone": true,
           "root": "@tpl",
           "module": "templates"
+        },
+        "annotate": {
+          "add": true
         }
       }
     }
   },
   "dependencies": {
-    "gulp-angular-templatecache": "^1.1.3"
+    "gulp-angular-templatecache": "^1.1.3",
+    "ng-annotate": "^0.8.0"
   }
 }
